@@ -30,16 +30,6 @@ public class CORSFilter extends GenericFilterBean {
                 "Access-Control-Allow-Methods",
                 "GET, POST, PUT, DELETE, OPTIONS, HEAD");
 
-        // Just allow our domains: localhost:9000, prospector.qa.circleback.com, contactcloud.circleback.com
-        String origin = httpRequest.getHeader("Origin");
-
-        if (StringUtils.isNotBlank(origin) && (StringUtils.endsWith(origin, "salesintel.io")
-                || StringUtils.endsWith(origin, "circleback.com") || StringUtils.contains(origin, "localhost"))) {
-            httpResponse.addHeader(
-                    "Access-Control-Allow-Origin",
-                    origin);
-        }
-
         chain.doFilter(request, response);
     }
 }
