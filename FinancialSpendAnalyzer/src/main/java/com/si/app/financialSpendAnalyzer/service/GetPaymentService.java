@@ -19,7 +19,7 @@ public class GetPaymentService
 	
 	public List<PaymentDetails> getPaymentDetails(long customerId)
 	{
-		List<Object[]> payments = getPaymentRepository.getPaymentM(customerId);
+		List<Object[]> payments = getPaymentRepository.getPayment(customerId);
 		
 		 
 		 List<PaymentDetails>  paymentList  =  new ArrayList<>();

@@ -40,7 +40,7 @@ public interface GetPaymentRepository extends JpaRepository<CustomerPayments, Lo
 			") credit on credit.payment_Date = debit.payment_Date and credit.customer_id = debit.customer_id " + 
 			"GROUP BY debit.payment_Date, debit.customer_id; ",nativeQuery=true)
 	
-	List<Object[]>getPaymentM(@Param("customerId") Long customerId);
+	List<Object[]>getPayment(@Param("customerId") Long customerId);
 	
 	
 }
