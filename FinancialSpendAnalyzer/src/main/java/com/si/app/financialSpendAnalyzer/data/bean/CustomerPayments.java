@@ -32,10 +32,10 @@ public class CustomerPayments implements Serializable {
 	@Column(name = "payment_category")
 	private String paymentCategory;
 
-	@Column(name = "payment_Type")
+	@Column(name = "payment_type")
 	private String paymentType;
 
-	@Column(name = "payment_Date")
+	@Column(name = "payment_date")
 	private Date paymentDate = new Date();
 
 	public Long getId() {
