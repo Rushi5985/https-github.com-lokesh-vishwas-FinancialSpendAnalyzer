@@ -28,11 +28,12 @@ public class GetPaymentService
 	        {
 			 	PaymentDetails payment= new PaymentDetails();
 			 	 payment.setMonth((Date)param[0]);
-	            payment.setCustomerNumber((BigInteger)param[1]);
-	            payment.setTotalIncome((Double)param[2]);
-	            payment.setTotalOutgoing((Double)param[3]);
-	            
-	            paymentList.add(payment);
+	             payment.setCustomerNumber((BigInteger)param[1]);
+	             payment.setTotalIncome((Double)param[2]);
+	             payment.setTotalOutgoing((Double)param[3]);
+	             payment.setClosingBalance((Double)param[4]);
+	             
+	             paymentList.add(payment);
 	        }
 		
 		return paymentList;

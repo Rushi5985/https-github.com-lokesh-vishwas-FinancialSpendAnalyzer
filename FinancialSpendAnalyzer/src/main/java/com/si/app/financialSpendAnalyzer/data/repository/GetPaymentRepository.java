@@ -17,7 +17,8 @@ public interface GetPaymentRepository extends JpaRepository<CustomerPayments, Lo
 			"debit.payment_Date, " + 
 			"debit.customer_id, " + 
 			"SUM(debit.amount) AS outgoing, " + 
-			"SUM(credit.amount) AS incoming " + 
+			"SUM(credit.amount) AS incoming, " +
+			"(SUM(credit.amount) - SUM(debit.amount)) AS balance " + 
 			"FROM ( " + 
 			"SELECT payment_Date " + 
 			",customer_id " + 
