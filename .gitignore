@@ -1,0 +1,8 @@
+
+.project
+FinancialSpendAnalyzer/.classpath
+*.prefs
+*.properties
+*.class
+*.MF
+*.xml
